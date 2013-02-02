@@ -1,0 +1,442 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D7C40EF916BCAFCE0063E447 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C40EF816BCAFCE0063E447 /* UIKit.framework */; };
+		D7C40EFB16BCAFCE0063E447 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C40EFA16BCAFCE0063E447 /* Foundation.framework */; };
+		D7C40EFD16BCAFCE0063E447 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C40EFC16BCAFCE0063E447 /* CoreGraphics.framework */; };
+		D7C40F0316BCAFCE0063E447 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7C40F0116BCAFCE0063E447 /* InfoPlist.strings */; };
+		D7C40F0516BCAFCE0063E447 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C40F0416BCAFCE0063E447 /* main.m */; };
+		D7C40F0916BCAFCE0063E447 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C40F0816BCAFCE0063E447 /* AppDelegate.m */; };
+		D7C40F0B16BCAFCE0063E447 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C40F0A16BCAFCE0063E447 /* Default.png */; };
+		D7C40F0D16BCAFCE0063E447 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C40F0C16BCAFCE0063E447 /* Default@2x.png */; };
+		D7C40F0F16BCAFCE0063E447 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C40F0E16BCAFCE0063E447 /* Default-568h@2x.png */; };
+		D7C40F1716BCAFCE0063E447 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C40F1616BCAFCE0063E447 /* SenTestingKit.framework */; };
+		D7C40F1816BCAFCE0063E447 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C40EF816BCAFCE0063E447 /* UIKit.framework */; };
+		D7C40F1916BCAFCE0063E447 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C40EFA16BCAFCE0063E447 /* Foundation.framework */; };
+		D7C40F2116BCAFCE0063E447 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7C40F1F16BCAFCE0063E447 /* InfoPlist.strings */; };
+		D7C40F2416BCAFCE0063E447 /* BiospartaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C40F2316BCAFCE0063E447 /* BiospartaTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D7C40F1A16BCAFCE0063E447 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7C40EEB16BCAFCE0063E447 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7C40EF316BCAFCE0063E447;
+			remoteInfo = Biosparta;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D7C40EF416BCAFCE0063E447 /* Biosparta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Biosparta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7C40EF816BCAFCE0063E447 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D7C40EFA16BCAFCE0063E447 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D7C40EFC16BCAFCE0063E447 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D7C40F0016BCAFCE0063E447 /* Biosparta-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Biosparta-Info.plist"; sourceTree = "<group>"; };
+		D7C40F0216BCAFCE0063E447 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D7C40F0416BCAFCE0063E447 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D7C40F0616BCAFCE0063E447 /* Biosparta-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Biosparta-Prefix.pch"; sourceTree = "<group>"; };
+		D7C40F0716BCAFCE0063E447 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D7C40F0816BCAFCE0063E447 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D7C40F0A16BCAFCE0063E447 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D7C40F0C16BCAFCE0063E447 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D7C40F0E16BCAFCE0063E447 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D7C40F1516BCAFCE0063E447 /* BiospartaTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BiospartaTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7C40F1616BCAFCE0063E447 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		D7C40F1E16BCAFCE0063E447 /* BiospartaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BiospartaTests-Info.plist"; sourceTree = "<group>"; };
+		D7C40F2016BCAFCE0063E447 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D7C40F2216BCAFCE0063E447 /* BiospartaTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BiospartaTests.h; sourceTree = "<group>"; };
+		D7C40F2316BCAFCE0063E447 /* BiospartaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BiospartaTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D7C40EF116BCAFCE0063E447 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7C40EF916BCAFCE0063E447 /* UIKit.framework in Frameworks */,
+				D7C40EFB16BCAFCE0063E447 /* Foundation.framework in Frameworks */,
+				D7C40EFD16BCAFCE0063E447 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7C40F1116BCAFCE0063E447 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7C40F1716BCAFCE0063E447 /* SenTestingKit.framework in Frameworks */,
+				D7C40F1816BCAFCE0063E447 /* UIKit.framework in Frameworks */,
+				D7C40F1916BCAFCE0063E447 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D7C40EE916BCAFCE0063E447 = {
+			isa = PBXGroup;
+			children = (
+				D7C40EFE16BCAFCE0063E447 /* Biosparta */,
+				D7C40F1C16BCAFCE0063E447 /* BiospartaTests */,
+				D7C40EF716BCAFCE0063E447 /* Frameworks */,
+				D7C40EF516BCAFCE0063E447 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D7C40EF516BCAFCE0063E447 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7C40EF416BCAFCE0063E447 /* Biosparta.app */,
+				D7C40F1516BCAFCE0063E447 /* BiospartaTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D7C40EF716BCAFCE0063E447 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7C40EF816BCAFCE0063E447 /* UIKit.framework */,
+				D7C40EFA16BCAFCE0063E447 /* Foundation.framework */,
+				D7C40EFC16BCAFCE0063E447 /* CoreGraphics.framework */,
+				D7C40F1616BCAFCE0063E447 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7C40EFE16BCAFCE0063E447 /* Biosparta */ = {
+			isa = PBXGroup;
+			children = (
+				D7C40F0716BCAFCE0063E447 /* AppDelegate.h */,
+				D7C40F0816BCAFCE0063E447 /* AppDelegate.m */,
+				D7C40EFF16BCAFCE0063E447 /* Supporting Files */,
+			);
+			path = Biosparta;
+			sourceTree = "<group>";
+		};
+		D7C40EFF16BCAFCE0063E447 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D7C40F0016BCAFCE0063E447 /* Biosparta-Info.plist */,
+				D7C40F0116BCAFCE0063E447 /* InfoPlist.strings */,
+				D7C40F0416BCAFCE0063E447 /* main.m */,
+				D7C40F0616BCAFCE0063E447 /* Biosparta-Prefix.pch */,
+				D7C40F0A16BCAFCE0063E447 /* Default.png */,
+				D7C40F0C16BCAFCE0063E447 /* Default@2x.png */,
+				D7C40F0E16BCAFCE0063E447 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D7C40F1C16BCAFCE0063E447 /* BiospartaTests */ = {
+			isa = PBXGroup;
+			children = (
+				D7C40F2216BCAFCE0063E447 /* BiospartaTests.h */,
+				D7C40F2316BCAFCE0063E447 /* BiospartaTests.m */,
+				D7C40F1D16BCAFCE0063E447 /* Supporting Files */,
+			);
+			path = BiospartaTests;
+			sourceTree = "<group>";
+		};
+		D7C40F1D16BCAFCE0063E447 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D7C40F1E16BCAFCE0063E447 /* BiospartaTests-Info.plist */,
+				D7C40F1F16BCAFCE0063E447 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D7C40EF316BCAFCE0063E447 /* Biosparta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7C40F2716BCAFCE0063E447 /* Build configuration list for PBXNativeTarget "Biosparta" */;
+			buildPhases = (
+				D7C40EF016BCAFCE0063E447 /* Sources */,
+				D7C40EF116BCAFCE0063E447 /* Frameworks */,
+				D7C40EF216BCAFCE0063E447 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Biosparta;
+			productName = Biosparta;
+			productReference = D7C40EF416BCAFCE0063E447 /* Biosparta.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D7C40F1416BCAFCE0063E447 /* BiospartaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7C40F2A16BCAFCE0063E447 /* Build configuration list for PBXNativeTarget "BiospartaTests" */;
+			buildPhases = (
+				D7C40F1016BCAFCE0063E447 /* Sources */,
+				D7C40F1116BCAFCE0063E447 /* Frameworks */,
+				D7C40F1216BCAFCE0063E447 /* Resources */,
+				D7C40F1316BCAFCE0063E447 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7C40F1B16BCAFCE0063E447 /* PBXTargetDependency */,
+			);
+			name = BiospartaTests;
+			productName = BiospartaTests;
+			productReference = D7C40F1516BCAFCE0063E447 /* BiospartaTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D7C40EEB16BCAFCE0063E447 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Jesus Cagide";
+			};
+			buildConfigurationList = D7C40EEE16BCAFCE0063E447 /* Build configuration list for PBXProject "Biosparta" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D7C40EE916BCAFCE0063E447;
+			productRefGroup = D7C40EF516BCAFCE0063E447 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D7C40EF316BCAFCE0063E447 /* Biosparta */,
+				D7C40F1416BCAFCE0063E447 /* BiospartaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D7C40EF216BCAFCE0063E447 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7C40F0316BCAFCE0063E447 /* InfoPlist.strings in Resources */,
+				D7C40F0B16BCAFCE0063E447 /* Default.png in Resources */,
+				D7C40F0D16BCAFCE0063E447 /* Default@2x.png in Resources */,
+				D7C40F0F16BCAFCE0063E447 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7C40F1216BCAFCE0063E447 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7C40F2116BCAFCE0063E447 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D7C40F1316BCAFCE0063E447 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D7C40EF016BCAFCE0063E447 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7C40F0516BCAFCE0063E447 /* main.m in Sources */,
+				D7C40F0916BCAFCE0063E447 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7C40F1016BCAFCE0063E447 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7C40F2416BCAFCE0063E447 /* BiospartaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D7C40F1B16BCAFCE0063E447 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7C40EF316BCAFCE0063E447 /* Biosparta */;
+			targetProxy = D7C40F1A16BCAFCE0063E447 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D7C40F0116BCAFCE0063E447 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7C40F0216BCAFCE0063E447 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D7C40F1F16BCAFCE0063E447 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7C40F2016BCAFCE0063E447 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D7C40F2516BCAFCE0063E447 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D7C40F2616BCAFCE0063E447 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D7C40F2816BCAFCE0063E447 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Biosparta/Biosparta-Prefix.pch";
+				INFOPLIST_FILE = "Biosparta/Biosparta-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D7C40F2916BCAFCE0063E447 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Biosparta/Biosparta-Prefix.pch";
+				INFOPLIST_FILE = "Biosparta/Biosparta-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D7C40F2B16BCAFCE0063E447 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Biosparta.app/Biosparta";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Biosparta/Biosparta-Prefix.pch";
+				INFOPLIST_FILE = "BiospartaTests/BiospartaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		D7C40F2C16BCAFCE0063E447 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Biosparta.app/Biosparta";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Biosparta/Biosparta-Prefix.pch";
+				INFOPLIST_FILE = "BiospartaTests/BiospartaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D7C40EEE16BCAFCE0063E447 /* Build configuration list for PBXProject "Biosparta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7C40F2516BCAFCE0063E447 /* Debug */,
+				D7C40F2616BCAFCE0063E447 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7C40F2716BCAFCE0063E447 /* Build configuration list for PBXNativeTarget "Biosparta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7C40F2816BCAFCE0063E447 /* Debug */,
+				D7C40F2916BCAFCE0063E447 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D7C40F2A16BCAFCE0063E447 /* Build configuration list for PBXNativeTarget "BiospartaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7C40F2B16BCAFCE0063E447 /* Debug */,
+				D7C40F2C16BCAFCE0063E447 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D7C40EEB16BCAFCE0063E447 /* Project object */;
+}
