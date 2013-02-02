@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MosaicView.h"
 #import "MosaicViewDelegateProtocol.h"
+#import "ProductListDelegate.h"
 
 
 @interface MainViewController : UIViewController<MosaicViewDelegateProtocol>{
@@ -19,5 +20,6 @@
 
 
  @property(nonatomic,assign) IBOutlet MosaicView *mosaicView;
+ @property(nonatomic,assign) id<ProductListDelegate> productListDelegate;
 
 @end

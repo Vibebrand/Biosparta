@@ -19,9 +19,12 @@
 @implementation MainViewController
 
 @synthesize mosaicView;
+@synthesize productListDelegate;
 
 -(void)dealloc
 {
+    self.mosaicView = nil;
+    self.productListDelegate = nil;
     [snapshotBeforeRotation release];
     [snapshotAfterRotation release];
     [super dealloc];
@@ -53,6 +56,19 @@ static UIImageView *captureSnapshotOfView(UIView *targetView){
     return retVal;
 }
 
+/*
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [super viewWillDisappear:animated];
+}*/
+
 #pragma mark - Public
 
 - (void)viewDidLayoutSubviews{
@@ -62,6 +78,7 @@ static UIImageView *captureSnapshotOfView(UIView *targetView){
     [super viewDidLoad];
     mosaicView.datasource = [CustomMosaicDatasource sharedInstance];
     mosaicView.delegate = self;
+
 }
 
 - (void)didReceiveMemoryWarning{
@@ -99,6 +116,7 @@ static UIImageView *captureSnapshotOfView(UIView *targetView){
 
 -(void)mosaicViewDidTap:(MosaicDataView *)aModule{
     NSLog(@"#DEBUG Tapped %@", aModule.module);
+    [self.productListDelegate showProductListWith:@"one" usingNavigationController:self.navigationController];
 }
 
 -(void)mosaicViewDidDoubleTap:(MosaicDataView *)aModule{

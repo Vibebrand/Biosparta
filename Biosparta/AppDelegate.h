@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "MainViewController.h"
-
+#import "MasterController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (retain, nonatomic) UIWindow *window;
 @property (retain, nonatomic) MainViewController *mainView;
+@property (retain, nonatomic) MasterController * masterController;
 
 @end
