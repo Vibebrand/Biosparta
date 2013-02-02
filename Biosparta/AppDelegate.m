@@ -25,16 +25,16 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     
-    ProductViewController * productListView= [[ProductViewController alloc] initWithNibName:@"ProductViewController" bundle: [NSBundle mainBundle]];
+    //ProductViewController * productListView= [[ProductViewController alloc] initWithNibName:@"ProductViewController" bundle: [NSBundle mainBundle]];
     
     
-   // self.mainView = [[[MainViewController alloc] initWithNibName:@"MainViewController" bundle: [NSBundle mainBundle]] autorelease];
+    self.mainView = [[[MainViewController alloc] initWithNibName:@"MainViewController" bundle: [NSBundle mainBundle]] autorelease];
     //self.masterController = [MasterController new];
    // [self.mainView setProductListDelegate:self.masterController];
     
     //UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController: self.mainView ];
     //navigationController.navigationBar.tintColor=[UIColor blackColor];
-    [self.window setRootViewController:productListView];
+    [self.window setRootViewController:self.mainView];
     [self.window makeKeyAndVisible];
     return YES;
 }

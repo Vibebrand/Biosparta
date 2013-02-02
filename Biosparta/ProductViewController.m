@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Jesus Cagide. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import "ProductViewController.h"
 #import "UITableView+ZGParallelView.h"
 
@@ -56,7 +57,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 1;
+    return 6;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
