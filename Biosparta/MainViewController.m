@@ -81,7 +81,7 @@ static UIImageView *captureSnapshotOfView(UIView *targetView){
 
 -(void)mosaicViewDidTap:(MosaicDataView *)aModule{
     NSLog(@"#DEBUG Tapped %@", aModule.module);
-    [self.productListDelegate showProductListWith:@"one" usingNavigationController:self.navigationController];
+    [self.productListDelegate showProductListWith:aModule.module.title];
 }
 
 -(void)mosaicViewDidDoubleTap:(MosaicDataView *)aModule{

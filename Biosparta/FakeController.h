@@ -7,8 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NavigationDelegate.h"
 
 @interface FakeController : UIViewController
+
+
+
+@property (nonatomic, assign )IBOutlet UIButton* paymentsButton;
+@property (nonatomic, assign )IBOutlet UIButton* backButton;
+
+@property(nonatomic, assign) id<NavigationDelegate> navigationDelegate;
+
+
+
 
 -(IBAction) onClick1: (id) sender;
 

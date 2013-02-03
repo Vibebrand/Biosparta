@@ -8,9 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "ProductListDelegate.h"
+#import "NavigationDelegate.h"
 
-@interface MasterController : NSObject<ProductListDelegate>
+@interface MasterController : NSObject<ProductListDelegate, NavigationDelegate>
 
--(void) showProductListWith:(NSString *) nameProduct usingNavigationController:(UINavigationController *) navigationController;
+@property(nonatomic, retain)UINavigationController *navigationController;
+
+
+-(void) showProductListWith:(NSString *) nameProduct;
+-(void) popView;
 
 @end

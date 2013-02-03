@@ -1,5 +1,5 @@
 //
-//  ProductListDelegate.h
+//  NavigationDelegate.h
 //  Biosparta
 //
 //  Created by Jesus Cagide on 02/02/13.
@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol ProductListDelegate <NSObject>
+@protocol NavigationDelegate <NSObject>
 
--(void) showProductListWith:(NSString *) nameProduct;
+-(void) popView;
 
 @end

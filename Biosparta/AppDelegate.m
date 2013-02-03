@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "ProductViewController.h"
 
 @implementation AppDelegate
 
@@ -23,16 +22,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     self.mainView = [[[MainViewController alloc] initWithNibName:@"MainViewController" bundle: [NSBundle mainBundle]] autorelease];
     
     self.masterController = [MasterController new];
     [self.mainView setProductListDelegate:self.masterController];
     
-    UINavigationController *navigationController = [[UINavigationController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] init] ;
     [navigationController addChildViewController:self.mainView];
     [navigationController setNavigationBarHidden:YES animated:NO];
+    
+    [self.masterController setNavigationController:navigationController];
+    
     [self.window setRootViewController:navigationController ];
     [self.window makeKeyAndVisible];
     return YES;

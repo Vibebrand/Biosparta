@@ -14,6 +14,14 @@
 
 @implementation FakeController
 
+@synthesize navigationDelegate;
+
+- (void)dealloc
+{
+    self.navigationDelegate = nil;
+    [super dealloc];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -26,7 +34,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"px_by_Gre3g"]];
+    
+    UIImage *buttonImage = [[UIImage imageNamed:@"greenButton.png"]
+                            resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
+    UIImage *buttonImageHighlight = [[UIImage imageNamed:@"greenButton.png"]
+                                     resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
+    
+    // Set the background for any states you plan to use
+    [self.paymentsButton setBackgroundImage:buttonImage forState:UIControlStateNormal]
+    ;
+    [self.paymentsButton setBackgroundImage:buttonImageHighlight forState:UIControlStateHighlighted];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,7 +58,7 @@
 
 -(IBAction) onClick1: (id) sender
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.navigationDelegate popView];
 }
 
 @end
