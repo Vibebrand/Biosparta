@@ -43,6 +43,8 @@
 		D7C40F8116BCD72C0063E447 /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7C40F7F16BCD72C0063E447 /* ProductViewController.xib */; };
 		D7C40F8816BCF01B0063E447 /* MasterController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C40F8716BCF01B0063E447 /* MasterController.m */; };
 		D7C40F8B16BCFB5F0063E447 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C40F8A16BCFB5F0063E447 /* QuartzCore.framework */; };
+		D7C4104116BDCAB50063E447 /* FakeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C4103F16BDCAB50063E447 /* FakeController.m */; };
+		D7C4104216BDCAB50063E447 /* FakeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7C4104016BDCAB50063E447 /* FakeController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,9 @@
 		D7C40F8716BCF01B0063E447 /* MasterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterController.m; sourceTree = "<group>"; };
 		D7C40F8916BCF09D0063E447 /* ProductListDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductListDelegate.h; sourceTree = "<group>"; };
 		D7C40F8A16BCFB5F0063E447 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D7C4103E16BDCAB40063E447 /* FakeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeController.h; sourceTree = "<group>"; };
+		D7C4103F16BDCAB50063E447 /* FakeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeController.m; sourceTree = "<group>"; };
+		D7C4104016BDCAB50063E447 /* FakeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FakeController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +306,9 @@
 				D7C40F5A16BCB15B0063E447 /* MainViewController.m */,
 				D7C40F7D16BCD72C0063E447 /* ProductViewController.h */,
 				D7C40F7E16BCD72C0063E447 /* ProductViewController.m */,
+				D7C4103E16BDCAB40063E447 /* FakeController.h */,
+				D7C4103F16BDCAB50063E447 /* FakeController.m */,
+				D7C4104016BDCAB50063E447 /* FakeController.xib */,
 			);
 			name = ViewsControllers;
 			sourceTree = "<group>";
@@ -444,6 +452,7 @@
 				D7C40F7716BCB77F0063E447 /* 009.jpg in Resources */,
 				D7C40F7816BCB77F0063E447 /* data.json in Resources */,
 				D7C40F8116BCD72C0063E447 /* ProductViewController.xib in Resources */,
+				D7C4104216BDCAB50063E447 /* FakeController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +498,7 @@
 				D7C40F7C16BCD3A20063E447 /* UITableView+ZGParallelView.m in Sources */,
 				D7C40F8016BCD72C0063E447 /* ProductViewController.m in Sources */,
 				D7C40F8816BCF01B0063E447 /* MasterController.m in Sources */,
+				D7C4104116BDCAB50063E447 /* FakeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,6 +663,7 @@
 				D7C40F2916BCAFCE0063E447 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D7C40F2A16BCAFCE0063E447 /* Build configuration list for PBXNativeTarget "BiospartaTests" */ = {
 			isa = XCConfigurationList;
@@ -661,6 +672,7 @@
 				D7C40F2C16BCAFCE0063E447 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

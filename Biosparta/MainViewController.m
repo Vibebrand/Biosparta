@@ -10,7 +10,7 @@
 #import "MosaicData.h"
 #import "MosaicDataView.h"
 #import "CustomMosaicDatasource.h"
-
+#import "FakeController.h"
 
 @interface MainViewController ()
 
@@ -56,19 +56,6 @@ static UIImageView *captureSnapshotOfView(UIView *targetView){
     return retVal;
 }
 
-/*
-- (void)viewWillAppear:(BOOL)animated
-{
-    [self.navigationController setNavigationBarHidden:YES animated:animated];
-    [super viewWillAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [self.navigationController setNavigationBarHidden:NO animated:animated];
-    [super viewWillDisappear:animated];
-}*/
-
 #pragma mark - Public
 
 - (void)viewDidLayoutSubviews{
@@ -86,30 +73,8 @@ static UIImageView *captureSnapshotOfView(UIView *targetView){
     // Dispose of any resources that can be recreated.
 }
 
--(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
-    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
-    snapshotBeforeRotation = captureSnapshotOfView(mosaicView);
-    [self.view insertSubview:snapshotBeforeRotation aboveSubview:mosaicView];
-}
-
--(void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
-    snapshotAfterRotation = captureSnapshotOfView(mosaicView);
-    
-    snapshotBeforeRotation.alpha = 0.0;
-    [self.view insertSubview:snapshotAfterRotation belowSubview:snapshotBeforeRotation];
-    mosaicView.hidden = YES;
-}
-
--(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation{
-    [snapshotBeforeRotation removeFromSuperview];
-    [snapshotAfterRotation removeFromSuperview];
-    snapshotBeforeRotation = nil;
-    snapshotAfterRotation = nil;
-    mosaicView.hidden = NO;
-}
-
 -(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation{
-    return YES;
+    return NO;
 }
 
 #pragma mark - MosaicViewDelegateProtocol

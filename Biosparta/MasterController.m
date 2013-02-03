@@ -7,15 +7,15 @@
 //
 
 #import "MasterController.h"
-#import "ProductViewController.h"
+#import "FakeController.h"
 @implementation MasterController
 
 
 -(void) showProductListWith:(NSString *) nameProduct usingNavigationController:(UINavigationController *) navigationController
 {
-    ProductViewController * productListView= [[ProductViewController alloc] initWithNibName:@"ProductViewController" bundle: nil];
-    [navigationController pushViewController:productListView animated:TRUE];
-    [productListView release];
+    FakeController* fakeController = [[FakeController alloc] initWithNibName:@"FakeController" bundle:nil];
+    [navigationController pushViewController:fakeController  animated:YES];
+   [fakeController release];
 }
 
 @end
