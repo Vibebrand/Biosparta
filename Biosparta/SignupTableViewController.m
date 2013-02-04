@@ -334,6 +334,26 @@
     return self;
 }
 
+- (void) requieredOTP
+{
+    
+}
+
+- (BOOL) autoHandleError: (NSString *) error
+{
+    return YES;
+}
+
+- (BOOL) onErrorClose
+{
+    return YES;
+}
+
+- (void) transactionCompleted: (BOOL) correctly
+{
+    // TODO: React if the transaction was completed correctly or not
+}
+
 - (void)dealloc {
 	[cellFirstname release];
 	[cellLastname release];
