@@ -1,0 +1,23 @@
+/* 
+   Localizable.strings
+   Radius
+
+   Created by Nada Jaksic on 7/13/10.
+   Copyright 2010 __MyCompanyName__. All rights reserved.
+ */
+
+"AppName" = "Biosparta";
+"Login" = "Login";
+"ConnectionError" = "Error en el servidor. intentar de nuevo.";
+"Form Incomplete" = "Por favor rellena todos los datos.";
+"BadEmail" = "Por favor escribe un correo valido.";
+"ConfirmPwdError" = "Passwords do not match.";
+"UnknownRegistrationError" = "Registration error, please try again.";
+"RegistrationError" = "Registration error: ";
+"SignUp" = "Sign Up"; 
+"UnknownLoginError" = "Login error. Please try again.";
+"LoginError" = "Login error: ";
+"Gender" = "Gender";
+"Male" = "Male";
+"Female"="Female";
+"NoGender"="I won't tell";
