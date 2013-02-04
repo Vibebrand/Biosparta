@@ -11,7 +11,7 @@
 #import "NavigationDelegate.h"
 #import <MediaPlayer/MediaPlayer.h>
 
-@interface MasterController : NSObject<ProductListDelegate, NavigationDelegate>
+@interface BiospartaMasterController : NSObject<ProductListDelegate, NavigationDelegate>
 
 @property(nonatomic, retain)UINavigationController *navigationController;
 

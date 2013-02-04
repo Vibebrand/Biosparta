@@ -7,6 +7,13 @@
 //
 
 #import "SignupTableViewController.h"
+#import "../../PadeMobileSDK/PadeMobileSDK/PadeMobileFramework.h"
+
+@interface SignupTableViewController ()
+
+@property (nonatomic, retain) PadeMobileFramework * padeMobileFramework;
+
+@end
 
 @implementation SignupTableViewController
 
@@ -301,10 +308,40 @@
 		}
 	}
 	
+    if(rtn) {
+        self.padeMobileFramework = [[[PadeMobileFramework alloc] initWithDelegate: self] autorelease];
+        [self.padeMobileFramework performeBuyOf: [NSNumber numberWithFloat: 10.5]];
+    }
+    
 	// release it all
 	[alert release];
 	[fieldArray release];
 	return rtn;
+}
+
+- (UIViewController *) getRootViewController
+{
+    return self;
+}
+
+- (void) requieredOTP
+{
+    
+}
+
+- (BOOL) autoHandleError: (NSString *) error
+{
+    return YES;
+}
+
+- (BOOL) onErrorClose
+{
+    return YES;
+}
+
+- (void) transactionCompleted: (BOOL) correctly
+{
+    // TODO: React if the transaction was completed correctly or not
 }
 
 - (void)dealloc {
@@ -323,6 +360,7 @@
 	[activityIndicator release];
     
     self.navigationDelegate = nil;
+    self.padeMobileFramework = nil;
     
     self.cellBackButton = nil;
     self.cellPaymentButton = nil;

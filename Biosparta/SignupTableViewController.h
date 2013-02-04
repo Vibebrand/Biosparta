@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "NavigationDelegate.h"
+#import "../../PadeMobileSDK/PadeMobileSDK/PadeMobileFrameworkDelegate.h"
 
-@interface SignupTableViewController : UITableViewController<UITextFieldDelegate, UIActionSheetDelegate>
+@interface SignupTableViewController : UITableViewController<UITextFieldDelegate, UIActionSheetDelegate, PadeMobileFrameworkDelegate>
 {
 	IBOutlet UITableViewCell *cellFirstname;
     IBOutlet UITableViewCell *cellLastname;

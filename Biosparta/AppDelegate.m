@@ -26,7 +26,7 @@
     
     self.mainView = [[[MainViewController alloc] initWithNibName:@"MainViewController" bundle: [NSBundle mainBundle]] autorelease];
     
-    self.masterController = [MasterController new];
+    self.masterController = [BiospartaMasterController new];
     [self.mainView setProductListDelegate:self.masterController];
     
     UINavigationController *navigationController = [[UINavigationController alloc] init] ;
