@@ -37,8 +37,6 @@
 
 
 
-
-
 /*
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -301,14 +299,6 @@
 			[alert setMessage:NSLocalizedString(@"BadEmail", @"")];
 			[alert show];		
 		}
-		else {
-			rtn = [txtPassword.text isEqualToString:txtConfirmPassword.text];
-			if (!rtn)
-			{
-				[alert setMessage:NSLocalizedString(@"ConfirmPwdError", @"")];
-				[alert show];
-			}
-		}
 	}
 	
 	// release it all
@@ -333,6 +323,9 @@
 	[activityIndicator release];
     
     self.navigationDelegate = nil;
+    
+    self.cellBackButton = nil;
+    self.cellPaymentButton = nil;
     
     [super dealloc];
 }

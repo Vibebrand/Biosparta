@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ProductListDelegate.h"
 #import "NavigationDelegate.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface MasterController : NSObject<ProductListDelegate, NavigationDelegate>
 
@@ -17,5 +18,6 @@
 
 -(void) showProductListWith:(NSString *) nameProduct;
 -(void) popView;
+
 
 @end

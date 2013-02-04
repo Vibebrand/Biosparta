@@ -45,8 +45,8 @@
 @property (nonatomic, retain) IBOutlet UITextField* txtConfirmPassword;
 
 
-@property(nonatomic, assign) IBOutlet UITableViewCell *cellBackButton;
-@property(nonatomic, assign) IBOutlet UITableViewCell *cellPaymentButton;
+@property(nonatomic, retain) IBOutlet UITableViewCell *cellBackButton;
+@property(nonatomic, retain) IBOutlet UITableViewCell *cellPaymentButton;
 @property(nonatomic, assign) id<NavigationDelegate> navigationDelegate;
 
 

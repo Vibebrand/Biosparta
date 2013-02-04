@@ -76,6 +76,8 @@
 		D7C411CF16BF3E210063E447 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7C411CD16BF3E210063E447 /* Localizable.strings */; };
 		D7C411D216BF5E780063E447 /* greenTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C411D016BF5E780063E447 /* greenTexture.png */; };
 		D7C411D316BF5E780063E447 /* greenTexture@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C411D116BF5E780063E447 /* greenTexture@2x.png */; };
+		D7C411D516BF86C60063E447 /* bios.mov in Resources */ = {isa = PBXBuildFile; fileRef = D7C411D416BF86C60063E447 /* bios.mov */; };
+		D7C411D716BF888E0063E447 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C411D616BF888D0063E447 /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +181,8 @@
 		D7C411CE16BF3E210063E447 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Biosparta/en.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
 		D7C411D016BF5E780063E447 /* greenTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greenTexture.png; path = textures/greenTexture.png; sourceTree = "<group>"; };
 		D7C411D116BF5E780063E447 /* greenTexture@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "greenTexture@2x.png"; path = "textures/greenTexture@2x.png"; sourceTree = "<group>"; };
+		D7C411D416BF86C60063E447 /* bios.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = bios.mov; sourceTree = "<group>"; };
+		D7C411D616BF888D0063E447 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7C411D716BF888E0063E447 /* MediaPlayer.framework in Frameworks */,
 				D7C40F8B16BCFB5F0063E447 /* QuartzCore.framework in Frameworks */,
 				D7C40EF916BCAFCE0063E447 /* UIKit.framework in Frameworks */,
 				D7C40EFB16BCAFCE0063E447 /* Foundation.framework in Frameworks */,
@@ -209,6 +214,7 @@
 		D7C40EE916BCAFCE0063E447 = {
 			isa = PBXGroup;
 			children = (
+				D7C411D616BF888D0063E447 /* MediaPlayer.framework */,
 				D7C40F8A16BCFB5F0063E447 /* QuartzCore.framework */,
 				D7C40EFE16BCAFCE0063E447 /* Biosparta */,
 				D7C40F1C16BCAFCE0063E447 /* BiospartaTests */,
@@ -467,6 +473,7 @@
 		D7C4106D16BE26E00063E447 /* productTextures */ = {
 			isa = PBXGroup;
 			children = (
+				D7C411D416BF86C60063E447 /* bios.mov */,
 				D7C4108616BE298D0063E447 /* zanahoria.png */,
 				D7C4108716BE298D0063E447 /* kinder.png */,
 				D7C4108816BE298D0063E447 /* fresa.png */,
@@ -605,6 +612,7 @@
 				D7C411CF16BF3E210063E447 /* Localizable.strings in Resources */,
 				D7C411D216BF5E780063E447 /* greenTexture.png in Resources */,
 				D7C411D316BF5E780063E447 /* greenTexture@2x.png in Resources */,
+				D7C411D516BF86C60063E447 /* bios.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

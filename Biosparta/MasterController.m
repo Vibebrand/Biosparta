@@ -23,15 +23,16 @@
 
 -(void) showProductListWith:(NSString *) nameProduct;
 {
-    ProductListController * fakeController = [[ProductListController alloc] initWithNibName:@"ProductListController" bundle:nil];
-    [fakeController setNavigationDelegate:self];
-    
-    GKLParallaxPicturesViewController *paralaxViewController = [[[GKLParallaxPicturesViewController alloc] initWithImages:[NSArray arrayWithObjects:[UIImage imageNamed:@"kinder"], [UIImage imageNamed:@"fresa"],[UIImage imageNamed:@"zanahoria"], nil] andContentView:fakeController.view] autorelease];
-  
-    [self.navigationController pushViewController:paralaxViewController  animated:YES];
-    
+    if ([nameProduct isEqualToString:@"Fiberry"]  || [nameProduct isEqualToString:@"KinderBerry"] ) {
+        
+        ProductListController * fakeController = [[ProductListController alloc] initWithNibName:@"ProductListController" bundle:nil];
+        [fakeController setNavigationDelegate:self];
+        
+        GKLParallaxPicturesViewController *paralaxViewController = [[[GKLParallaxPicturesViewController alloc] initWithImages:[NSArray arrayWithObjects:[UIImage imageNamed:@"kinder"], [UIImage imageNamed:@"fresa"],[UIImage imageNamed:@"zanahoria"], nil] andContentView:fakeController.view] autorelease];
+        
+        [self.navigationController pushViewController:paralaxViewController  animated:YES];
+    }
 }
-
 
 -(void) popView
 {
@@ -46,5 +47,6 @@
     
     [self.navigationController pushViewController:signupVC animated:YES];
 }
+
 
 @end
