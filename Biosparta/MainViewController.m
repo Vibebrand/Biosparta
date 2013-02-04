@@ -10,7 +10,7 @@
 #import "MosaicData.h"
 #import "MosaicDataView.h"
 #import "CustomMosaicDatasource.h"
-#import "FakeController.h"
+#import "ProductListController.h"
 
 @interface MainViewController ()
 

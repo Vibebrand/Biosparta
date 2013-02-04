@@ -16,7 +16,7 @@
 @synthesize parallaxDelegate;
 
 static CGFloat WindowHeight = 250.0;
-static CGFloat ImageHeight  = 400.0;
+static CGFloat ImageHeight  = 270.0;
 static CGFloat PageControlHeight = 20.0f;
 
 - (id)initWithImages:(NSArray *)images andContentView:(UIView *)contentView {
@@ -28,7 +28,7 @@ static CGFloat PageControlHeight = 20.0f;
         _imageScroller.showsVerticalScrollIndicator     = NO;
         _imageScroller.pagingEnabled                    = YES;
         
-        _imageViews = [NSMutableArray arrayWithCapacity:[images count]];
+        _imageViews = [[NSMutableArray arrayWithCapacity:[images count]] retain];
         [self addImages:images];
         
         _transparentScroller = [[UIScrollView alloc] initWithFrame:CGRectZero];
@@ -56,7 +56,7 @@ static CGFloat PageControlHeight = 20.0f;
         [self.view addSubview:_contentScrollView];
         
 //        load up our delegate to see when images are tapped on
-        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
+        UITapGestureRecognizer *tapGesture = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)] autorelease];
         tapGesture.numberOfTapsRequired = 2;
         [_transparentScroller addGestureRecognizer:tapGesture];
     }
@@ -76,14 +76,14 @@ static CGFloat PageControlHeight = 20.0f;
     dispatch_async(queue, ^{
         NSData *imageData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:urlString]];
         dispatch_sync(dispatch_get_main_queue(), ^{
-            UIImage *downloadedImage = [[UIImage alloc] initWithData:imageData];
+            UIImage *downloadedImage = [[[UIImage alloc] initWithData:imageData] autorelease];
             [imageView setImage:downloadedImage];
         });
     });
 }
 
 - (void)addImage:(id)image atIndex:(int)index{
-    UIImageView *imageView  = [[UIImageView alloc] init];
+    UIImageView *imageView  = [[[UIImageView alloc] init] autorelease];
     if ([image isKindOfClass:[UIImage class]]) {
         [imageView setImage:image];
         //                allow users to submit URLs

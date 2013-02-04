@@ -11,5 +11,6 @@
 @protocol NavigationDelegate <NSObject>
 
 -(void) popView;
+-(void) pushCustomView;
 
 @end

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "NavigationDelegate.h"
 
-@interface FakeController : UIViewController
+@interface ProductListController : UIViewController
 
 
 
@@ -22,5 +22,5 @@
 
 
 -(IBAction) onClick1: (id) sender;
-
+-(IBAction) onClick2: (id) sender;
 @end

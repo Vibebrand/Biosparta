@@ -7,8 +7,10 @@
 //
 
 #import "MasterController.h"
-#import "FakeController.h"
+#import "ProductListController.h"
 #import "GKLParallaxPicturesViewController.h"
+#import "SignupTableViewController.h"
+
 
 @implementation MasterController
 
@@ -21,24 +23,28 @@
 
 -(void) showProductListWith:(NSString *) nameProduct;
 {
-    //UIView *testContentView = [[[UINib nibWithNibName:@"testContentView" bundle:nil] instantiateWithOwner:nil options:nil] objectAtIndex:0];
-    
-    FakeController * fakeController = [[FakeController alloc] initWithNibName:@"FakeController" bundle:nil];
+    ProductListController * fakeController = [[ProductListController alloc] initWithNibName:@"ProductListController" bundle:nil];
     [fakeController setNavigationDelegate:self];
     
-    
-    GKLParallaxPicturesViewController *paralaxViewController = [[[GKLParallaxPicturesViewController alloc] initWithImages:[NSArray arrayWithObjects:[UIImage imageNamed:@"kindberry"], [UIImage imageNamed:@"fresa-01"],[UIImage imageNamed:@"zanahoria-01"], nil] andContentView:fakeController.view] autorelease];
-    
-    //paralaxViewController.parallaxHeight = 150;
-    
-    
+    GKLParallaxPicturesViewController *paralaxViewController = [[[GKLParallaxPicturesViewController alloc] initWithImages:[NSArray arrayWithObjects:[UIImage imageNamed:@"kinder"], [UIImage imageNamed:@"fresa"],[UIImage imageNamed:@"zanahoria"], nil] andContentView:fakeController.view] autorelease];
+  
     [self.navigationController pushViewController:paralaxViewController  animated:YES];
     
 }
 
+
 -(void) popView
 {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void) pushCustomView
+{
+    SignupTableViewController* signupVC = [[SignupTableViewController alloc]initWithNibName:@"SignupTableViewController" bundle:nil];
+	signupVC.title = NSLocalizedString(@"SignUp", @"");
+    [signupVC setNavigationDelegate:self];
+    
+    [self.navigationController pushViewController:signupVC animated:YES];
 }
 
 @end

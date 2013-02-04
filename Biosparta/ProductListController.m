@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Jesus Cagide. All rights reserved.
 //
 
-#import "FakeController.h"
+#import "ProductListController.h"
 
-@interface FakeController ()
+@interface ProductListController ()
 
 @end
 
-@implementation FakeController
+@implementation ProductListController
 
 @synthesize navigationDelegate;
 
@@ -38,13 +38,24 @@
     
     UIImage *buttonImage = [[UIImage imageNamed:@"greenButton.png"]
                             resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
-    UIImage *buttonImageHighlight = [[UIImage imageNamed:@"greenButton.png"]
+    UIImage *buttonImageHighlight = [[UIImage imageNamed:@"greenButtonHighlight.png"]
                                      resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
     
     // Set the background for any states you plan to use
     [self.paymentsButton setBackgroundImage:buttonImage forState:UIControlStateNormal]
     ;
     [self.paymentsButton setBackgroundImage:buttonImageHighlight forState:UIControlStateHighlighted];
+    
+    
+    UIImage *buttonImage1 = [[UIImage imageNamed:@"greyButton.png"]
+                            resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
+    UIImage *buttonImageHighlight1 = [[UIImage imageNamed:@"greyButtonHighlight.png"]
+                                     resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
+    
+    // Set the background for any states you plan to use
+    [self.backButton setBackgroundImage:buttonImage1 forState:UIControlStateNormal]
+    ;
+    [self.backButton setBackgroundImage:buttonImageHighlight1 forState:UIControlStateHighlighted];
     
     
 }
@@ -60,5 +71,11 @@
 {
     [self.navigationDelegate popView];
 }
+
+-(IBAction) onClick2: (id) sender
+{
+    [self.navigationDelegate pushCustomView];
+}
+
 
 @end
