@@ -39,7 +39,6 @@
 		D7C40F7716BCB77F0063E447 /* 009.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7C40F6D16BCB77F0063E447 /* 009.jpg */; };
 		D7C40F7816BCB77F0063E447 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = D7C40F6E16BCB77F0063E447 /* data.json */; };
 		D7C40F7C16BCD3A20063E447 /* UITableView+ZGParallelView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C40F7B16BCD3A20063E447 /* UITableView+ZGParallelView.m */; };
-		D7C40F8816BCF01B0063E447 /* MasterController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C40F8716BCF01B0063E447 /* MasterController.m */; };
 		D7C40F8B16BCFB5F0063E447 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C40F8A16BCFB5F0063E447 /* QuartzCore.framework */; };
 		D7C4104116BDCAB50063E447 /* ProductListController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C4103F16BDCAB50063E447 /* ProductListController.m */; };
 		D7C4104216BDCAB50063E447 /* ProductListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7C4104016BDCAB50063E447 /* ProductListController.xib */; };
@@ -78,6 +77,10 @@
 		D7C411D316BF5E780063E447 /* greenTexture@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C411D116BF5E780063E447 /* greenTexture@2x.png */; };
 		D7C411D516BF86C60063E447 /* bios.mov in Resources */ = {isa = PBXBuildFile; fileRef = D7C411D416BF86C60063E447 /* bios.mov */; };
 		D7C411D716BF888E0063E447 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C411D616BF888D0063E447 /* MediaPlayer.framework */; };
+		D7C411ED16BF8E9F0063E447 /* libPadeMobileSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C411EA16BF8E990063E447 /* libPadeMobileSDK.a */; };
+		D7C411EF16BF8EEF0063E447 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C411EE16BF8EEF0063E447 /* CoreImage.framework */; };
+		D7C411F116BF8EF60063E447 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C411F016BF8EF60063E447 /* Accelerate.framework */; };
+		D7C411F416BF8FDD0063E447 /* BiospartaMasterController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C411F316BF8FDD0063E447 /* BiospartaMasterController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +90,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = D7C40EF316BCAFCE0063E447;
 			remoteInfo = Biosparta;
+		};
+		D7C411E916BF8E990063E447 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7C411E116BF8E990063E447 /* PadeMobileSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F195554216BCAD5700492E93;
+			remoteInfo = PadeMobileSDK;
+		};
+		D7C411EB16BF8E990063E447 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7C411E116BF8E990063E447 /* PadeMobileSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F195555316BCAD5700492E93;
+			remoteInfo = PadeMobileSDKTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -137,8 +154,6 @@
 		D7C40F6E16BCB77F0063E447 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		D7C40F7A16BCD3A20063E447 /* UITableView+ZGParallelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+ZGParallelView.h"; sourceTree = "<group>"; };
 		D7C40F7B16BCD3A20063E447 /* UITableView+ZGParallelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+ZGParallelView.m"; sourceTree = "<group>"; };
-		D7C40F8616BCF01B0063E447 /* MasterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterController.h; sourceTree = "<group>"; };
-		D7C40F8716BCF01B0063E447 /* MasterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterController.m; sourceTree = "<group>"; };
 		D7C40F8916BCF09D0063E447 /* ProductListDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductListDelegate.h; sourceTree = "<group>"; };
 		D7C40F8A16BCFB5F0063E447 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D7C4103E16BDCAB40063E447 /* ProductListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductListController.h; sourceTree = "<group>"; };
@@ -183,6 +198,11 @@
 		D7C411D116BF5E780063E447 /* greenTexture@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "greenTexture@2x.png"; path = "textures/greenTexture@2x.png"; sourceTree = "<group>"; };
 		D7C411D416BF86C60063E447 /* bios.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = bios.mov; sourceTree = "<group>"; };
 		D7C411D616BF888D0063E447 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		D7C411E116BF8E990063E447 /* PadeMobileSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PadeMobileSDK.xcodeproj; path = ../PadeMobileSDK/PadeMobileSDK.xcodeproj; sourceTree = "<group>"; };
+		D7C411EE16BF8EEF0063E447 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		D7C411F016BF8EF60063E447 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		D7C411F216BF8FDD0063E447 /* BiospartaMasterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiospartaMasterController.h; sourceTree = "<group>"; };
+		D7C411F316BF8FDD0063E447 /* BiospartaMasterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiospartaMasterController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +210,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7C411F116BF8EF60063E447 /* Accelerate.framework in Frameworks */,
+				D7C411EF16BF8EEF0063E447 /* CoreImage.framework in Frameworks */,
+				D7C411ED16BF8E9F0063E447 /* libPadeMobileSDK.a in Frameworks */,
 				D7C411D716BF888E0063E447 /* MediaPlayer.framework in Frameworks */,
 				D7C40F8B16BCFB5F0063E447 /* QuartzCore.framework in Frameworks */,
 				D7C40EF916BCAFCE0063E447 /* UIKit.framework in Frameworks */,
@@ -214,8 +237,8 @@
 		D7C40EE916BCAFCE0063E447 = {
 			isa = PBXGroup;
 			children = (
-				D7C411D616BF888D0063E447 /* MediaPlayer.framework */,
-				D7C40F8A16BCFB5F0063E447 /* QuartzCore.framework */,
+				D7C411F016BF8EF60063E447 /* Accelerate.framework */,
+				D7C411EE16BF8EEF0063E447 /* CoreImage.framework */,
 				D7C40EFE16BCAFCE0063E447 /* Biosparta */,
 				D7C40F1C16BCAFCE0063E447 /* BiospartaTests */,
 				D7C40EF716BCAFCE0063E447 /* Frameworks */,
@@ -235,6 +258,9 @@
 		D7C40EF716BCAFCE0063E447 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D7C411E116BF8E990063E447 /* PadeMobileSDK.xcodeproj */,
+				D7C411D616BF888D0063E447 /* MediaPlayer.framework */,
+				D7C40F8A16BCFB5F0063E447 /* QuartzCore.framework */,
 				D7C40EF816BCAFCE0063E447 /* UIKit.framework */,
 				D7C40EFA16BCAFCE0063E447 /* Foundation.framework */,
 				D7C40EFC16BCAFCE0063E447 /* CoreGraphics.framework */,
@@ -355,8 +381,8 @@
 		D7C40F5516BCB0980063E447 /* BussiesControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D7C40F8616BCF01B0063E447 /* MasterController.h */,
-				D7C40F8716BCF01B0063E447 /* MasterController.m */,
+				D7C411F216BF8FDD0063E447 /* BiospartaMasterController.h */,
+				D7C411F316BF8FDD0063E447 /* BiospartaMasterController.m */,
 			);
 			name = BussiesControllers;
 			sourceTree = "<group>";
@@ -495,6 +521,15 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		D7C411E216BF8E990063E447 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7C411EA16BF8E990063E447 /* libPadeMobileSDK.a */,
+				D7C411EC16BF8E990063E447 /* PadeMobileSDKTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -553,6 +588,12 @@
 			mainGroup = D7C40EE916BCAFCE0063E447;
 			productRefGroup = D7C40EF516BCAFCE0063E447 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D7C411E216BF8E990063E447 /* Products */;
+					ProjectRef = D7C411E116BF8E990063E447 /* PadeMobileSDK.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D7C40EF316BCAFCE0063E447 /* Biosparta */,
@@ -560,6 +601,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D7C411EA16BF8E990063E447 /* libPadeMobileSDK.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libPadeMobileSDK.a;
+			remoteRef = D7C411E916BF8E990063E447 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D7C411EC16BF8E990063E447 /* PadeMobileSDKTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PadeMobileSDKTests.octest;
+			remoteRef = D7C411EB16BF8E990063E447 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D7C40EF216BCAFCE0063E447 /* Resources */ = {
@@ -656,11 +714,11 @@
 				D7C40F5C16BCB15B0063E447 /* MainViewController.m in Sources */,
 				D7C40F6216BCB7190063E447 /* CustomMosaicDatasource.m in Sources */,
 				D7C40F7C16BCD3A20063E447 /* UITableView+ZGParallelView.m in Sources */,
-				D7C40F8816BCF01B0063E447 /* MasterController.m in Sources */,
 				D7C4104116BDCAB50063E447 /* ProductListController.m in Sources */,
 				D7C4105216BDFA9E0063E447 /* GKLParallaxPicturesViewController.m in Sources */,
 				D7C411BE16BF334E0063E447 /* Product.m in Sources */,
 				D7C411CA16BF3CFE0063E447 /* SignupTableViewController.m in Sources */,
+				D7C411F416BF8FDD0063E447 /* BiospartaMasterController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -761,10 +819,13 @@
 		D7C40F2816BCAFCE0063E447 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Biosparta/Biosparta-Prefix.pch";
 				INFOPLIST_FILE = "Biosparta/Biosparta-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -772,10 +833,15 @@
 		D7C40F2916BCAFCE0063E447 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Biosparta/Biosparta-Prefix.pch";
 				INFOPLIST_FILE = "Biosparta/Biosparta-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

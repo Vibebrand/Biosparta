@@ -17,7 +17,8 @@
 "SignUp" = "Sign Up"; 
 "UnknownLoginError" = "Login error. Please try again.";
 "LoginError" = "Login error: ";
-"Gender" = "Gender";
-"Male" = "Male";
-"Female"="Female";
-"NoGender"="I won't tell";
+"Gender" = "Estado";
+"Male" = "Aguascalientes";
+"Female"="Guadalajara";
+"NoGender"="Distrito Federal";
+"FormIncomplete" = "Formulario incompleto";
