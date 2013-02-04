@@ -6,13 +6,14 @@
 //  Copyright (c) 2013 Jesus Cagide. All rights reserved.
 //
 
-#import "MasterController.h"
+#import "BiospartaMasterController.h"
+
 #import "ProductListController.h"
 #import "GKLParallaxPicturesViewController.h"
 #import "SignupTableViewController.h"
 
 
-@implementation MasterController
+@implementation BiospartaMasterController
 
 
 -(void)dealloc

@@ -10,7 +10,7 @@
 #import "ProductListDelegate.h"
 #import "NavigationDelegate.h"
 
-@interface MasterController : NSObject<ProductListDelegate, NavigationDelegate>
+@interface BiospartaMasterController : NSObject<ProductListDelegate, NavigationDelegate>
 
 @property(nonatomic, retain)UINavigationController *navigationController;
 

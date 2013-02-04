@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "MainViewController.h"
-#import "MasterController.h"
+
+#import "BiospartaMasterController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (retain, nonatomic) UIWindow *window;
 @property (retain, nonatomic) MainViewController *mainView;
-@property (retain, nonatomic) MasterController * masterController;
+@property (retain, nonatomic) BiospartaMasterController * masterController;
 
 @end
