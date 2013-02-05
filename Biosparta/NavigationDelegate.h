@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Product.h"
 
 @protocol NavigationDelegate <NSObject>
 
 -(void) popView;
--(void) pushCustomView;
+-(void) pushCustomView:(Product*) product;
 
 @end

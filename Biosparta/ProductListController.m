@@ -15,10 +15,15 @@
 @implementation ProductListController
 
 @synthesize navigationDelegate;
+@synthesize price;
 
 - (void)dealloc
 {
     self.navigationDelegate = nil;
+    self.price = nil;
+    self.backButton = nil;
+    self.paymentsButton = nil;
+    
     [super dealloc];
 }
 
@@ -31,9 +36,12 @@
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.price setText: [NSString stringWithFormat:@" Precio $ %f", self.product.price]];
      self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"px_by_Gre3g"]];
     
     UIImage *buttonImage = [[UIImage imageNamed:@"greenButton.png"]
@@ -74,7 +82,7 @@
 
 -(IBAction) onClick2: (id) sender
 {
-    [self.navigationDelegate pushCustomView];
+    [self.navigationDelegate pushCustomView:self.product];
 }
 
 

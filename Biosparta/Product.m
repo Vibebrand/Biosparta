@@ -10,7 +10,7 @@
 
 @implementation Product
 
-
+@synthesize price,title,description,images;
 
 
 @end

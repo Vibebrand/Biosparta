@@ -1,12 +1,12 @@
  [
   {
     "imageFilename": "01.png",
-    "size": 0,
+    "size": 1,
     "title": "Biosparta"
   },
   {
   "imageFilename": "04.png",
-  "size": 1,
+  "size": 0,
   "title": "Noticias"
   },
   {

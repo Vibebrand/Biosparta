@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "NavigationDelegate.h"
+#import "Product.h"
 
 @interface ProductListController : UIViewController
 
@@ -15,10 +16,9 @@
 
 @property (nonatomic, assign )IBOutlet UIButton* paymentsButton;
 @property (nonatomic, assign )IBOutlet UIButton* backButton;
-
+@property (nonatomic, retain )IBOutlet UILabel* price;
 @property(nonatomic, assign) id<NavigationDelegate> navigationDelegate;
-
-
+@property(nonatomic, retain) Product* product;
 
 
 -(IBAction) onClick1: (id) sender;

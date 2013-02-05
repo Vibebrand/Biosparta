@@ -22,14 +22,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     
     self.mainView = [[[MainViewController alloc] initWithNibName:@"MainViewController" bundle: [NSBundle mainBundle]] autorelease];
     
-    self.masterController = [BiospartaMasterController new];
+    self.masterController = [[BiospartaMasterController new] autorelease];
+    [self.masterController setUpProducts];
     [self.mainView setProductListDelegate:self.masterController];
     
-    UINavigationController *navigationController = [[UINavigationController alloc] init] ;
+    UINavigationController *navigationController = [[UINavigationController new] autorelease] ;
     [navigationController addChildViewController:self.mainView];
     [navigationController setNavigationBarHidden:YES animated:NO];
     

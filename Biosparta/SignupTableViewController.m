@@ -24,14 +24,12 @@
 #pragma mark -
 #pragma mark View lifecycle
 
-
-- (void)viewDidLoad 
+- (void)viewDidLoad
 {
     [super viewDidLoad];
      self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"px_by_Gre3g"]];
-
-    self.cellPaymentButton.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"greenTexture"]];
-    
+    self.cellPaymentButton.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"orangeButton"]];
+    self.cellBackButton.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"greyTexture"]];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -171,6 +169,9 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    [tableView deselectRowAtIndexPath:indexPath animated:YES ];
+    
     if(indexPath.section == 1)
     {
         if (indexPath.row == 0) {
@@ -264,7 +265,7 @@
 {
 	BOOL rtn = YES; 
 	// Declare your Alert,  NSArray, increment int
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"FormIncomplete", @"") delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+	/*UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"FormIncomplete", @"") delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
 	NSArray *fieldArray;	
 	int i = 0;
 	
@@ -306,16 +307,15 @@
 			[alert setMessage:NSLocalizedString(@"BadEmail", @"")];
 			[alert show];		
 		}
-	}
+	}*/
 	
     if(rtn) {
         self.padeMobileFramework = [[[PadeMobileFramework alloc] initWithDelegate: self] autorelease];
-        [self.padeMobileFramework performeBuyOf: [NSNumber numberWithFloat: 10.5]];
+        [self.padeMobileFramework performeBuyOf: [NSNumber numberWithFloat: self.product.price ]];
     }
-    
 	// release it all
-	[alert release];
-	[fieldArray release];
+	/*[alert release];
+	[fieldArray release];*/
 	return rtn;
 }
 
@@ -341,10 +341,13 @@
 
 - (void) transactionCompleted: (BOOL) correctly
 {
+    if(correctly)
+       [self.navigationDelegate popView];
     // TODO: React if the transaction was completed correctly or not
 }
 
 - (void)dealloc {
+    
 	[cellFirstname release];
 	[cellLastname release];
 	[cellEmail release];
@@ -364,6 +367,7 @@
     
     self.cellBackButton = nil;
     self.cellPaymentButton = nil;
+    self.product =nil;
     
     [super dealloc];
 }

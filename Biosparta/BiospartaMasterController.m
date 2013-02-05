@@ -15,21 +15,52 @@
 
 @implementation BiospartaMasterController
 
+-(void)setUpProducts
+{
+    
+    self.fiberryProduct = [[Product new] autorelease];
+    
+    [self.fiberryProduct setTitle:@"Fiberry"];
+    [self.fiberryProduct setPrice:199.0];
+    [self.fiberryProduct setDescription:@"Descripcion"];
+    [self.fiberryProduct setImages:[NSArray arrayWithObjects:[UIImage imageNamed:@"kinder"], [UIImage imageNamed:@"fresa"],[UIImage imageNamed:@"zanahoria"], nil]];
+    
+    self.kinderBerry = [[Product new] autorelease];
+    [self.kinderBerry setTitle:@"KinderBerry"];
+    [self.kinderBerry setPrice:299.0];
+    [self.kinderBerry setDescription:@"Descripcion"];
+    [self.kinderBerry setImages:[NSArray arrayWithObjects:[UIImage imageNamed:@"kinder"], [UIImage imageNamed:@"fresa"],[UIImage imageNamed:@"zanahoria"], nil]];
+}
 
 -(void)dealloc
 {
     self.navigationController = nil;
+    self.fiberryProduct = nil;
+    self.kinderBerry = nil;
     [super dealloc];
 }
 
 -(void) showProductListWith:(NSString *) nameProduct;
 {
+    
     if ([nameProduct isEqualToString:@"Fiberry"]  || [nameProduct isEqualToString:@"KinderBerry"] ) {
         
+        Product* product_;
+        if([nameProduct isEqualToString:@"Fiberry"] )
+        {
+            product_ = self.fiberryProduct;
+        }else
+        {
+            product_ = self.kinderBerry;
+        }
         ProductListController * fakeController = [[ProductListController alloc] initWithNibName:@"ProductListController" bundle:nil];
-        [fakeController setNavigationDelegate:self];
         
-        GKLParallaxPicturesViewController *paralaxViewController = [[[GKLParallaxPicturesViewController alloc] initWithImages:[NSArray arrayWithObjects:[UIImage imageNamed:@"kinder"], [UIImage imageNamed:@"fresa"],[UIImage imageNamed:@"zanahoria"], nil] andContentView:fakeController.view] autorelease];
+        [fakeController setNavigationDelegate:self];
+        [fakeController setProduct:product_];
+        
+        GKLParallaxPicturesViewController *paralaxViewController = [[[GKLParallaxPicturesViewController alloc] initWithImages: product_.images andContentView:fakeController.view] autorelease];
+        
+        [paralaxViewController setProductList:fakeController];
         
         [self.navigationController pushViewController:paralaxViewController  animated:YES];
     }
@@ -40,10 +71,11 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
--(void) pushCustomView
+-(void) pushCustomView:(Product*) product;
 {
     SignupTableViewController* signupVC = [[SignupTableViewController alloc]initWithNibName:@"SignupTableViewController" bundle:nil];
 	signupVC.title = NSLocalizedString(@"SignUp", @"");
+    [signupVC setProduct:product];
     [signupVC setNavigationDelegate:self];
     
     [self.navigationController pushViewController:signupVC animated:YES];

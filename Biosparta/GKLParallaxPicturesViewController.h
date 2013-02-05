@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ProductListController.h"
+
 
 @interface GKLParallaxPicturesViewController : UIViewController<UIScrollViewDelegate> {
     NSMutableArray  *_imageViews;
@@ -23,6 +25,7 @@
 - (void)addImage:(id)image atIndex:(int)index;
 
 @property (retain) id parallaxDelegate;
+@property(nonatomic, retain) ProductListController * productList;
 
 @end
 

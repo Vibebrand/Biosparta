@@ -14,10 +14,18 @@
 
 @implementation GKLParallaxPicturesViewController
 @synthesize parallaxDelegate;
+@synthesize productList;
 
 static CGFloat WindowHeight = 250.0;
 static CGFloat ImageHeight  = 270.0;
 static CGFloat PageControlHeight = 20.0f;
+
+
+-(void)dealloc
+{
+    self.productList = nil;
+    [super dealloc];
+}
 
 - (id)initWithImages:(NSArray *)images andContentView:(UIView *)contentView {
     self = [super initWithNibName:nil bundle:nil];

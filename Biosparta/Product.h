@@ -11,7 +11,7 @@
 @interface Product : NSObject
 
 @property(nonatomic,retain)NSString * title;
-@property(nonatomic,assign)double * price;
+@property(nonatomic,assign)Float32  price;
 @property(nonatomic,retain)NSString * description;
 @property(nonatomic,retain)NSArray * images;
 

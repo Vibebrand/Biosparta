@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "NavigationDelegate.h"
 #import "../../PadeMobileSDK/PadeMobileSDK/PadeMobileFrameworkDelegate.h"
+#import "Product.h"
 
 @interface SignupTableViewController : UITableViewController<UITextFieldDelegate, UIActionSheetDelegate, PadeMobileFrameworkDelegate>
 {
@@ -50,6 +51,7 @@
 @property(nonatomic, retain) IBOutlet UITableViewCell *cellPaymentButton;
 @property(nonatomic, assign) id<NavigationDelegate> navigationDelegate;
 
+@property(nonatomic, retain) Product* product;
 
 -(void)signup;
 
