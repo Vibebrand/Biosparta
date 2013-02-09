@@ -23,13 +23,15 @@
     [self.fiberryProduct setTitle:@"Fiberry"];
     [self.fiberryProduct setPrice:199.0];
     [self.fiberryProduct setDescription:@"Descripcion"];
-    [self.fiberryProduct setImages:[NSArray arrayWithObjects:[UIImage imageNamed:@"kinder"], [UIImage imageNamed:@"fresa"],[UIImage imageNamed:@"zanahoria"], nil]];
-    
-    self.kinderBerry = [[Product new] autorelease];
+       self.kinderBerry = [[Product new] autorelease];
     [self.kinderBerry setTitle:@"KinderBerry"];
     [self.kinderBerry setPrice:299.0];
     [self.kinderBerry setDescription:@"Descripcion"];
+    [self.fiberryProduct setImages:[NSArray arrayWithObjects:[UIImage imageNamed:@"Fiberry"], [UIImage imageNamed:@"F01"],[UIImage imageNamed:@"F02"], nil]];
+    
     [self.kinderBerry setImages:[NSArray arrayWithObjects:[UIImage imageNamed:@"kinder"], [UIImage imageNamed:@"fresa"],[UIImage imageNamed:@"zanahoria"], nil]];
+    
+
 }
 
 -(void)dealloc
