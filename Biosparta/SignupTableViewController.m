@@ -12,6 +12,8 @@
 @interface SignupTableViewController ()
 
 @property (nonatomic, retain) PadeMobileFramework * padeMobileFramework;
+@property (nonatomic, retain) CLLocationManager * locationManager;
+
 
 @end
 
@@ -27,9 +29,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
      self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"px_by_Gre3g"]];
     self.cellPaymentButton.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"orangeButton"]];
     self.cellBackButton.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"greyTexture"]];
+    
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    self.locationManager.distanceFilter = kCLDistanceFilterNone;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers;
+    [self.locationManager startUpdatingLocation];
+    
+    geoRef.valid = false;
+    geoRef.country = nil;
+    
+    self.padeMobileFramework = [[[PadeMobileFramework alloc] initWithDelegate: self] autorelease];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -310,7 +324,6 @@
 	}*/
 	
     if(rtn) {
-        self.padeMobileFramework = [[[PadeMobileFramework alloc] initWithDelegate: self] autorelease];
         [self.padeMobileFramework performeBuyOf: [NSNumber numberWithFloat: self.product.price ]];
     }
 	// release it all
@@ -346,6 +359,33 @@
     // TODO: React if the transaction was completed correctly or not
 }
 
+- (GeoRef *) getGeoReference
+{
+    
+    return &geoRef;
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    CLLocation * lastLocation = [locations lastObject];
+    CLLocationDegrees latitude = lastLocation.coordinate.latitude;
+    CLLocationDegrees longitude = lastLocation.coordinate.longitude;
+    
+    CLGeocoder * geoCoder = [[CLGeocoder new] autorelease];
+    [geoCoder reverseGeocodeLocation:lastLocation completionHandler:^(NSArray *placemarks, NSError *error) {
+        if(placemarks && [placemarks count]) {
+            if(geoRef.country)
+                [geoRef.country release];
+            
+            CLPlacemark * placeMark = [placemarks objectAtIndex: 0];
+            geoRef.country = [placeMark.ISOcountryCode retain];
+            geoRef.latitude = latitude;
+            geoRef.longitude = longitude;
+            geoRef.valid = true;
+        }
+    }];
+}
+
 - (void)dealloc {
     
 	[cellFirstname release];
@@ -368,6 +408,8 @@
     self.cellBackButton = nil;
     self.cellPaymentButton = nil;
     self.product =nil;
+    
+    [geoRef.country release];
     
     [super dealloc];
 }
