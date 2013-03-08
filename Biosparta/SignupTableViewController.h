@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+
 #import "NavigationDelegate.h"
 #import "../../PadeMobileSDK/PadeMobileSDK/PadeMobileFrameworkDelegate.h"
 #import "Product.h"
 
-@interface SignupTableViewController : UITableViewController<UITextFieldDelegate, UIActionSheetDelegate, PadeMobileFrameworkDelegate>
+@interface SignupTableViewController : UITableViewController<UITextFieldDelegate, UIActionSheetDelegate, PadeMobileFrameworkDelegate, CLLocationManagerDelegate>
 {
 	IBOutlet UITableViewCell *cellFirstname;
     IBOutlet UITableViewCell *cellLastname;
@@ -29,8 +31,8 @@
 	IBOutlet UITextField* txtConfirmPassword;
 
 	UIActivityIndicatorView* activityIndicator;
-
-
+    
+    GeoRef geoRef;
 }
 
 @property (nonatomic, retain) IBOutlet UITableViewCell *cellFirstname;

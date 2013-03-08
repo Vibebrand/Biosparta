@@ -25,7 +25,7 @@
     [self.fiberryProduct setDescription:@"Descripcion"];
        self.kinderBerry = [[Product new] autorelease];
     [self.kinderBerry setTitle:@"KinderBerry"];
-    [self.kinderBerry setPrice:299.0];
+    [self.kinderBerry setPrice:99999.0];
     [self.kinderBerry setDescription:@"Descripcion"];
     [self.fiberryProduct setImages:[NSArray arrayWithObjects:[UIImage imageNamed:@"Fiberry"], [UIImage imageNamed:@"F01"],[UIImage imageNamed:@"F02"], nil]];
     

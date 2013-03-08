@@ -129,6 +129,7 @@
 		D7C4128F16C075CC0063E447 /* px_by_Gre3g.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C4125616C075CC0063E447 /* px_by_Gre3g.png */; };
 		D7C4129016C075CC0063E447 /* px_by_Gre3g_@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C4125716C075CC0063E447 /* px_by_Gre3g_@2X.png */; };
 		D7C4129216C076650063E447 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C4129116C076650063E447 /* Default-568h@2x.png */; };
+		F17E97D516CC0BE4002A3277 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17E97D416CC0BE4002A3277 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +153,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = F195555316BCAD5700492E93;
 			remoteInfo = PadeMobileSDKTests;
+		};
+		D7DD0CED16E7B84E00C43BE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7C411E116BF8E990063E447 /* PadeMobileSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F195554116BCAD5700492E93;
+			remoteInfo = PadeMobileSDK;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -299,6 +307,7 @@
 		D7C4125616C075CC0063E447 /* px_by_Gre3g.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = px_by_Gre3g.png; sourceTree = "<group>"; };
 		D7C4125716C075CC0063E447 /* px_by_Gre3g_@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "px_by_Gre3g_@2X.png"; sourceTree = "<group>"; };
 		D7C4129116C076650063E447 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F17E97D416CC0BE4002A3277 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +315,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F17E97D516CC0BE4002A3277 /* CoreLocation.framework in Frameworks */,
 				D7C411F116BF8EF60063E447 /* Accelerate.framework in Frameworks */,
 				D7C411EF16BF8EEF0063E447 /* CoreImage.framework in Frameworks */,
 				D7C411ED16BF8E9F0063E447 /* libPadeMobileSDK.a in Frameworks */,
@@ -333,11 +343,10 @@
 		D7C40EE916BCAFCE0063E447 = {
 			isa = PBXGroup;
 			children = (
+				F17E97D416CC0BE4002A3277 /* CoreLocation.framework */,
 				D7C4129116C076650063E447 /* Default-568h@2x.png */,
 				D7C4120316C05D590063E447 /* Icon@2x.png */,
 				D7C4120116C05D4E0063E447 /* Icon.png */,
-				D7C411F016BF8EF60063E447 /* Accelerate.framework */,
-				D7C411EE16BF8EEF0063E447 /* CoreImage.framework */,
 				D7C40EFE16BCAFCE0063E447 /* Biosparta */,
 				D7C40F1C16BCAFCE0063E447 /* BiospartaTests */,
 				D7C40EF716BCAFCE0063E447 /* Frameworks */,
@@ -358,6 +367,8 @@
 			isa = PBXGroup;
 			children = (
 				D7C411E116BF8E990063E447 /* PadeMobileSDK.xcodeproj */,
+				D7C411F016BF8EF60063E447 /* Accelerate.framework */,
+				D7C411EE16BF8EEF0063E447 /* CoreImage.framework */,
 				D7C411D616BF888D0063E447 /* MediaPlayer.framework */,
 				D7C40F8A16BCFB5F0063E447 /* QuartzCore.framework */,
 				D7C40EF816BCAFCE0063E447 /* UIKit.framework */,
@@ -728,6 +739,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D7DD0CEE16E7B84E00C43BE0 /* PBXTargetDependency */,
 			);
 			name = Biosparta;
 			productName = Biosparta;
@@ -969,6 +981,11 @@
 			isa = PBXTargetDependency;
 			target = D7C40EF316BCAFCE0063E447 /* Biosparta */;
 			targetProxy = D7C40F1A16BCAFCE0063E447 /* PBXContainerItemProxy */;
+		};
+		D7DD0CEE16E7B84E00C43BE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PadeMobileSDK;
+			targetProxy = D7DD0CED16E7B84E00C43BE0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
