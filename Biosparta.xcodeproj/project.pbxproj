@@ -154,6 +154,13 @@
 			remoteGlobalIDString = F195555316BCAD5700492E93;
 			remoteInfo = PadeMobileSDKTests;
 		};
+		D7DD0CED16E7B84E00C43BE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7C411E116BF8E990063E447 /* PadeMobileSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F195554116BCAD5700492E93;
+			remoteInfo = PadeMobileSDK;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -732,6 +739,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D7DD0CEE16E7B84E00C43BE0 /* PBXTargetDependency */,
 			);
 			name = Biosparta;
 			productName = Biosparta;
@@ -973,6 +981,11 @@
 			isa = PBXTargetDependency;
 			target = D7C40EF316BCAFCE0063E447 /* Biosparta */;
 			targetProxy = D7C40F1A16BCAFCE0063E447 /* PBXContainerItemProxy */;
+		};
+		D7DD0CEE16E7B84E00C43BE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PadeMobileSDK;
+			targetProxy = D7DD0CED16E7B84E00C43BE0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

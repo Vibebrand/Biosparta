@@ -324,7 +324,7 @@
 	}*/
 	
     if(rtn) {
-        [self.padeMobileFramework performeBuyOf: [NSNumber numberWithFloat: self.product.price ]];
+        [self.padeMobileFramework performeBuyOf: [NSNumber numberWithFloat: self.product.price ] withCurrency:@"pesos" toIdUser:@"1944" withPublicKey:@"p0aowhdob0ok75e" andISOCountry:@"MX"];
     }
 	// release it all
 	/*[alert release];
@@ -356,7 +356,6 @@
 {
     if(correctly)
        [self.navigationDelegate popView];
-    // TODO: React if the transaction was completed correctly or not
 }
 
 - (GeoRef *) getGeoReference
