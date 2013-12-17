@@ -1,16 +1,12 @@
 //
 //  SignupTableViewController.h
-//  ExSignup
-//
-//  Created by Nada Jaksic on 7/13/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
 #import "NavigationDelegate.h"
-#import "../../PadeMobileSDK/PadeMobileSDK/PadeMobileFrameworkDelegate.h"
+#import "PadeMobileFrameworkDelegate.h"
 #import "Product.h"
 
 @interface SignupTableViewController : UITableViewController<UITextFieldDelegate, UIActionSheetDelegate, PadeMobileFrameworkDelegate, CLLocationManagerDelegate>

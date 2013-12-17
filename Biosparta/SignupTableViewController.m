@@ -1,13 +1,9 @@
 //
 //  SignupTableViewController.m
-//  ExSignup
-//
-//  Created by Nada Jaksic on 7/13/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
 #import "SignupTableViewController.h"
-#import "../../PadeMobileSDK/PadeMobileSDK/PadeMobileFramework.h"
+#import "PadeMobileFramework.h"
 
 @interface SignupTableViewController ()
 
@@ -44,6 +40,7 @@
     geoRef.country = nil;
     
     self.padeMobileFramework = [[[PadeMobileFramework alloc] initWithDelegate: self] autorelease];
+    [self.padeMobileFramework setSandBox: YES];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -53,37 +50,6 @@
 
     return 15;
 }
-
-
-
-/*
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-*/
-/*
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
-*/
-/*
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-}
-*/
-/*
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-}
-*/
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
-
 
 #pragma mark -
 #pragma mark Table view data source
@@ -138,46 +104,6 @@
     }
 		return nil;
 }
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 
 #pragma mark -
 #pragma mark Table view delegate
@@ -277,58 +203,11 @@
 
 -(BOOL)validateSignupForm
 {
-	BOOL rtn = YES; 
-	// Declare your Alert,  NSArray, increment int
-	/*UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"FormIncomplete", @"") delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-	NSArray *fieldArray;	
-	int i = 0;
-	
-	// Load up our field array with the UITextField Values
-	fieldArray = [[NSArray arrayWithObjects: 
-				   [NSString stringWithFormat:@"%@",txtFirstname.text], 
-				   [NSString stringWithFormat:@"%@",txtLastname.text], 
-				   [NSString stringWithFormat:@"%@",txtEmail.text], 
-				   [NSString stringWithFormat:@"%@",txtPassword.text], 
-				   [NSString stringWithFormat:@"%@",txtConfirmPassword.text],
-				   [NSString stringWithFormat:@"%@",txtGender.text], nil] retain];
-	
-	
-	// loop through the array, alert if text field is empty, and break the the loop, other wise increment i  
-	for (NSString *fieldText in fieldArray){
-		NSLog(fieldText); // make sure all is reading correctly in the console
-		if([fieldText isEqualToString:@""]){			
-			[alert show]; 	
-			rtn = NO;
-			break; // break out!!
-		}
-		i++;		
-	}
-	
-	// check that all the field were passed (i == array.count) 
-	if(i == [[NSNumber numberWithInt: fieldArray.count] intValue]){
-		NSLog(@"Passed validation..."); 
-		rtn = YES;           
-	}
-	
-	if (rtn)
-	{
-		// validate email address
-		NSString* emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"; 
-		NSPredicate* emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex]; 
-		rtn = [emailTest evaluateWithObject:txtEmail.text];
-		if (!rtn)
-		{
-			[alert setMessage:NSLocalizedString(@"BadEmail", @"")];
-			[alert show];		
-		}
-	}*/
+	BOOL rtn = YES;
 	
     if(rtn) {
         [self.padeMobileFramework performeBuyOf: [NSNumber numberWithFloat: self.product.price ] withCurrency:@"pesos" toIdUser:@"1944" withPublicKey:@"p0aowhdob0ok75e" andISOCountry:@"MX"];
     }
-	// release it all
-	/*[alert release];
-	[fieldArray release];*/
 	return rtn;
 }
 
